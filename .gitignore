@@ -13,3 +13,4 @@ wheels/
 # Downloaded model artifacts
 AIModels/gemma/*
 AIModels/llama/*
+AIModels/whisper/*
