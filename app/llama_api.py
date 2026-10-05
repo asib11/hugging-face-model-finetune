@@ -8,7 +8,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 
-MODEL_PATH = Path(__file__).resolve().parents[1] / "AIModels" / "gemma"
+MODEL_PATH = Path(__file__).resolve().parents[1] / "AIModels" / "llama"
 
 # part 1: tokenizer and model loading text --> input token --> model --> output token --> text
 
@@ -24,7 +24,7 @@ model = AutoModelForCausalLM.from_pretrained(
 class ChatRequest(BaseModel):
     prompt: str
 
-@router.post("/chat-gemma")
+@router.post("/chat-llama")
 def chat(request: ChatRequest):
 
     #Porcess input messages
